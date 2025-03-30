@@ -1,4 +1,5 @@
 streamlit-extras
 python-docx
+openpyxl
 PyPDF2
 pandas
