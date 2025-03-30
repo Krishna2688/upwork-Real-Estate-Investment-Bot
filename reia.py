@@ -38,8 +38,7 @@ def query_gemini(messages, api_key):
     response = client.chat.completions.create(
         model="gemini-1.5-flash-latest",
         n=1,
-        messages=messages,
-        max_completion_tokens=100
+        messages=messages
     )
 
     return response.choices[0].message.content
@@ -50,9 +49,9 @@ def query_gemini(messages, api_key):
 # Header Section with Logo
 col1, col2 = st.columns([1, 16])
 with col1:
-    st.image("logo_t.png", width=100)  # Replace 'path_to_logo.png' with the actual path to your logo image
+    st.image("logo_t.png", width=250)  # Replace 'path_to_logo.png' with the actual path to your logo image
 with col2:
-    st.title(":orange[REA] Real Estate AI Assistant")
+    st.title(":orange[REA] - Real Estate AI Assistant")
 
 st.session_state["API_KEY"] = st.sidebar.text_input("Enter Your Key To Unlock (Press Enter)", type="password")
 # logon = st.sidebar.button("Login", key="logon_button")
